@@ -29,7 +29,7 @@ const Roadmap = () => {
                       alt="Grid"
                       width={550}
                       height={550}
-                      className="w-full"
+                      className="w-full "
                     />
                   </div>
                   <div className="relative z-1">
