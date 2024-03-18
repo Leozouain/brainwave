@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const Heading = ({ className, title, text, tag }) => {
   return (
     <motion.div
+      viewport={{ once: true }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2, delay: 0.5 }}

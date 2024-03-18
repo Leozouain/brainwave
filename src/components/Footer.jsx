@@ -9,6 +9,8 @@ const Footer = () => {
     max-sm:flex-col"
       >
         <p className=" caption text-n-4 lg:block">
+          <a href="https://github.com/Leozouain">LeoZouain </a>
+          {"  "}
           {new Date().getFullYear()} All rights reserved.
         </p>
         <ul className="flex gap-5 flex-wrap">

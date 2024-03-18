@@ -84,6 +84,7 @@ export default {
     },
   },
   plugins: [
+
     plugin(function ({ addBase, addComponents, addUtilities }) {
       addBase({});
       addComponents({
@@ -136,6 +137,7 @@ export default {
         ".tap-highlight-color": {
           "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
         },
+
       });
     }),
   ],

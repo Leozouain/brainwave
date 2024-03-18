@@ -1,5 +1,6 @@
 import { brainwaveWhiteSymbol, gradient, play } from "../../assets";
 import ChatBubbleWing from "../../assets/svg/ChatBubbleWing";
+import { easeInOut, motion } from "framer-motion";
 
 export const Gradient = () => {
   return (
@@ -50,7 +51,10 @@ export const VideoChatMessage = () => {
 export const VideoBar = () => {
   return (
     <div className="absolute left-0 bottom-0 w-full flex items-center p-6">
-      <img
+      <motion.img
+        initial={{ scale: 1 }}
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: easeInOut }}
         src={play}
         width={24}
         height={24}
@@ -59,7 +63,12 @@ export const VideoBar = () => {
       />
 
       <div className="flex-1 bg-[#D9D9D9]">
-        <div className="w-1/2 h-0.5 bg-color-1"></div>
+        <motion.div
+          initial={{ width: "0%" }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 10, repeat: Infinity }}
+          className=" h-0.5 bg-color-1"
+        ></motion.div>
       </div>
     </div>
   );

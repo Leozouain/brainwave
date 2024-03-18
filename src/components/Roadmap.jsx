@@ -36,13 +36,31 @@ const Roadmap = () => {
                     <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
                       <Tagline> {item.date}</Tagline>
                       <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
-                        <img
-                          className="mr-2.5"
-                          src={item.status === "done" ? check2 : loading1}
-                          alt={status}
-                          width={16}
-                          height={16}
-                        />
+                        {item.status === "done" ? (
+                          <img
+                            className="mr-2.5"
+                            src={check2}
+                            alt={status}
+                            width={16}
+                            height={16}
+                          />
+                        ) : (
+                          <motion.img
+                            animate={{
+                              rotate: [0, 360],
+                            }}
+                            transition={{
+                              duration: 1,
+                              repeat: Infinity,
+                              ease: "linear",
+                            }}
+                            className="mr-2.5"
+                            src={loading1}
+                            alt={status}
+                            width={16}
+                            height={16}
+                          />
+                        )}
                         <div className="tagline">{status}</div>
                       </div>
                     </div>

@@ -11,6 +11,7 @@ const Collaboration = () => {
       <div className="container lg:flex ">
         <div className="max-w-[25rem] ">
           <motion.h2
+            viewport={{ once: true }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.5 }}
@@ -21,6 +22,7 @@ const Collaboration = () => {
           <ul className="max-w-[22rem] mb-10 md:mb-14">
             {collabContent.map((item) => (
               <motion.li
+                viewport={{ once: true }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 0.8 }}
@@ -41,6 +43,7 @@ const Collaboration = () => {
         </div>
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <motion.p
+            viewport={{ once: true }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2, delay: 1.2 }}
@@ -54,6 +57,7 @@ const Collaboration = () => {
           >
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
               <motion.div
+                viewport={{ once: true }}
                 src="your-image-url.jpg" // Replace with your image URL
                 alt="Spinning Image"
                 animate={{

@@ -29,6 +29,7 @@ rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
             xl:w-auto"
             >
               <motion.img
+                viewport={{ once: true }}
                 animate={{ translateX: -500 }}
                 whileInView={{
                   translateX: 0,
@@ -46,6 +47,7 @@ rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
               />
             </div>
             <motion.div
+              viewport={{ once: true }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 2, delay: 0.5 }}
@@ -56,6 +58,7 @@ rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
                 Brainwave unlocks the potencial of AI-powered applications
               </p>
               <motion.ul
+                viewport={{ once: true }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 0.8 }}
@@ -79,6 +82,7 @@ rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
           </div>
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <motion.div
+              viewport={{ once: true }}
               initial={{ left: -150, opacity: 0 }}
               whileInView={{ left: 0, opacity: 1 }}
               transition={{ duration: 2, delay: 0.5 }}
@@ -107,6 +111,7 @@ rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
               <PhotoChatMessage />
             </motion.div>
             <motion.div
+              viewport={{ once: true }}
               initial={{ translateX: 300, opacity: 0 }}
               whileInView={{ translateX: 0, opacity: 1 }}
               transition={{ duration: 2, delay: 0.5 }}
