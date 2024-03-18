@@ -70,7 +70,11 @@ export default function Email() {
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
-              <img className="opacity-25" src={emailRobot} alt="" />
+              <img
+                className="opacity-25 object-cover overflow-hidden h-full w-full"
+                src={emailRobot}
+                alt=""
+              />
               <svg
                 className="absolute inset-0 h-full w-full stroke-gray-700 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
                 aria-hidden="true"
