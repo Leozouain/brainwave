@@ -8,6 +8,7 @@ import emailRobot from "../assets/emailRobot.png";
 import Button from "./Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { easeIn, motion } from "framer-motion";
 
 export default function Email() {
   const [name, setName] = useState("");
@@ -65,12 +66,16 @@ export default function Email() {
   };
 
   return (
-    <div className="relative isolate bg-n-8">
+    <section id="contact" className="relative isolate bg-n-8">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
-              <img
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 0.3 }}
+                transition={{ duration: 1, ease: easeIn }}
                 className="opacity-25 object-cover overflow-hidden h-full w-full"
                 src={emailRobot}
                 alt=""
@@ -122,9 +127,9 @@ export default function Email() {
               Get in touch
             </h2>
             <p className="mt-6 text-lg leading-8 text-n-3">
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci
-              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
+              We’d love to hear from you! Whether you have questions, feedback,
+              or just want to say hello, feel free to reach out. Here are the
+              ways you can get in touch:
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-n-3">
               <div className="flex gap-x-4">
@@ -136,9 +141,9 @@ export default function Email() {
                   />
                 </dt>
                 <dd>
-                  545 Mavis Island
+                  123 Main Street
                   <br />
-                  Chicago, IL 99191
+                  Santa Ana, CA 12345
                 </dd>
               </div>
               <div className="flex gap-x-4">
@@ -161,11 +166,8 @@ export default function Email() {
                   />
                 </dt>
                 <dd>
-                  <a
-                    className="hover:text-white"
-                    href="mailto:hello@example.com"
-                  >
-                    hello@example.com
+                  <a className="hover:text-white" href="ai@brainwave.com">
+                    ai@brainwave.com
                   </a>
                 </dd>
               </div>
@@ -173,7 +175,6 @@ export default function Email() {
           </div>
         </div>
         <form
-          //   action="mailto:leozouain@gmail.com"
           method="POST"
           onSubmit={handleEmail}
           className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
@@ -272,11 +273,13 @@ export default function Email() {
               </div>
             </div>
             <div className="mt-8 flex justify-end">
-              <Button type="submit">Send message</Button>
+              <Button className="mx-auto" type="submit">
+                Send message
+              </Button>
             </div>
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 }

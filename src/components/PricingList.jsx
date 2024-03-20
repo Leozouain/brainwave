@@ -8,6 +8,7 @@ const PricingList = () => {
     <div className="flex gap-[1rem] max-lg:flex-wrap">
       {pricing.map((item) => (
         <motion.div
+          viewport={{ once: true }}
           whileHover={{ scale: 1.1 }}
           transition={{
             type: "spring",
@@ -37,7 +38,7 @@ const PricingList = () => {
 
           <Button
             className="w-full mb-6"
-            href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
+            href={item.price ? "/pricing" : "#contact"}
             white={!!item.price}
           >
             {item.price ? "Get started" : "Contact us"}

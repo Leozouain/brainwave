@@ -15,6 +15,7 @@ const Roadmap = () => {
             const status = item.status === "done" ? "Done" : "In progress";
             return (
               <motion.div
+                viewport={{ once: true }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 1 }}
