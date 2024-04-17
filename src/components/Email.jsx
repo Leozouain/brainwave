@@ -47,7 +47,7 @@ export default function Email() {
         "brainwaveMessage",
         "template_ann8qt9",
         templateParams,
-        "5dcM9dePuT6e86N-G"
+        import.meta.env.VITE_EMAIL_KEY
       )
       .then(
         (res) => {
@@ -194,6 +194,7 @@ export default function Email() {
                     type="text"
                     name="first-name"
                     id="first-name"
+                    value={name}
                     autoComplete="given-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-n-3 sm:text-sm sm:leading-6"
                   />
@@ -212,6 +213,7 @@ export default function Email() {
                     type="text"
                     name="last-name"
                     id="last-name"
+                    value={lastName}
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-n-3 sm:text-sm sm:leading-6"
                   />
@@ -230,6 +232,7 @@ export default function Email() {
                     type="email"
                     name="email"
                     id="email"
+                    value={email}
                     autoComplete="email"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-n-3 sm:text-sm sm:leading-6"
                   />
@@ -249,6 +252,7 @@ export default function Email() {
                     name="phone-number"
                     id="phone-number"
                     autoComplete="tel"
+                    value={phone}
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-n-3 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -266,6 +270,7 @@ export default function Email() {
                     name="message"
                     id="message"
                     rows={4}
+                    value={msg}
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-n-3 sm:text-sm sm:leading-6"
                     defaultValue={""}
                   />

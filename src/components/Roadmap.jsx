@@ -18,7 +18,7 @@ const Roadmap = () => {
                 viewport={{ once: true }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 2, delay: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
                 key={item.id}
                 className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem]
                 ${item.colorful ? "bg-conic-gradient" : "bg-n-6"}`}

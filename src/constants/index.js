@@ -59,12 +59,17 @@ export const navigation = [
     },
     {
         id: "4",
+        title: "Contact Us",
+        url: "#contact",
+    },
+    {
+        id: "5",
         title: "New account",
         url: "#signup",
         onlyMobile: true,
     },
     {
-        id: "5",
+        id: "6",
         title: "Sign in",
         url: "#login",
         onlyMobile: true,
